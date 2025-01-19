@@ -1,0 +1,8 @@
+[build]
+  command = "pip install -r requirements.txt && python app.py"
+  publish = "build" # Replace "build" with the output directory of flask-frozen
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
