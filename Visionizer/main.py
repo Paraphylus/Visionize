@@ -1,8 +1,10 @@
 from flask import Flask, render_template, send_file, jsonify
+from flask_frozen import Freezer
 from huggingface_hub import InferenceClient
 from PIL import Image
 import io
 import os
+freezer = Freezer(app)
 
 app = Flask(__name__)
 HF_TOKEN = os.getenv("HF_TOKEN")
@@ -37,3 +39,4 @@ def generate(prompt):
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
+	freezer.freeze()
