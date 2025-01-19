@@ -38,5 +38,5 @@ def generate(prompt):
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8000, debug=True)
+    app.run(host='35.200.171.190', port=8000, debug=True)
 	freezer.freeze()
